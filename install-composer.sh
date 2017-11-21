@@ -1,12 +1,22 @@
 #!/bin/bash
 
-# Rotina para download e instalação do Composer
+###############################################################################
+#
+#	Script para instalação do composer em ambiente Linux, verificando se
+#	o PHP está instalado no sistema.
+#
+#	@author Nicholas Lopes Leite <nicklleite@gmail.com>
+#	@date	20/11/2017
+#	@see	https://getcomposer.org/download/
+#
+###############################################################################
+
 function installComposer() {
 	if [ ! -f /usr/bin/php ]; then
 		echo "PHP não instalado! Verifique os pacotes instalados e tente novamente!"
 		exit
 	else
-		echo "Executando: cd ~"
+		echo "Executando: cd ~/"
 		cd ~/
 
 		# Executando comandos para instalação do composer
